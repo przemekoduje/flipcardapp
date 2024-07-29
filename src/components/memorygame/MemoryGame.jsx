@@ -9,7 +9,7 @@ function MemoryGame() {
   const [matchedCards, setMatchedCards] = useState([]);
 
 
-  
+
 
   //Funkcja do stworzenia talii kart
   const createDeck = () => {
@@ -67,16 +67,18 @@ function MemoryGame() {
 
   return (
     <div className="memory-game">
-      {cards.map((card, index) => (
-        <Card 
-          className="card"
-          key={card.id} 
-          card={card} 
-          index={index} 
-          handleClick={() => flipCard(index)} 
-          isFlipped={flippedCards.includes(index) || matchedCards.includes(index)}
-        />
-      ))}
+      <div className="cards-container">
+        {cards.map((card, index) => (
+          <Card
+            className="card"
+            key={card.id}
+            card={card}
+            index={index}
+            handleClick={() => flipCard(index)}
+            isFlipped={flippedCards.includes(index) || matchedCards.includes(index)}
+          />
+        ))}
+      </div>
     </div>
   );
 }
