@@ -1,16 +1,54 @@
 .memory-game {
+  
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   
 }
+.refresh-button{
+  position: absolute;
+  bottom: -50px;
+  left: 5px;
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: transparent;
+  width: 100%;
+
+}
+.reset-best-button{
+  position: absolute;
+  bottom: -100px;
+  left: 5px;
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: transparent;
+  display: none;
+}
+.timer{
+  position: absolute;
+  top: -50px;
+  left: 5px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.best-time{
+  position: absolute;
+  top: -30px;
+  left: 5px;
+  font-size: 15px;
+
+}
 
 .cards-container {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 420px; /* Dostosuj szerokość kontenera w zależności od marginesów i wielkości kart */
   margin: auto; /* Wyśrodkowanie kontenera */
+  padding: 0;
   
 }
 
@@ -29,6 +67,11 @@
   flex-basis: calc(25% - 10px);
 }
 
+.card.hidden {
+  background: #000; /* Black background for hidden cards */
+  color: transparent; /* Make the text invisible */
+}
+
 .card.flipped {
-  background: #fff;
+  background: #fff; /* White background for flipped cards */
 }
